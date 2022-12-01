@@ -1,0 +1,11 @@
+name: mvp
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  mvp:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "foo=base64==" >> $GITHUB_ENV
+      - run: echo ${{ env.foo }}
